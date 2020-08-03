@@ -4,7 +4,7 @@ settings:
   aggregator: consolidator
   verbose: false
   env:
-    application_hostname: test_confluence_instance.atlassian.com   # Confluence DC hostname without protocol and port e.g. test-jira.atlassian.com or localhost
+    application_hostname: confl-loadb-g690bt290qo3-363603329.eu-central-1.elb.amazonaws.com
     application_protocol: http      # http or https
     application_port: 80            # 80, 443, 8080, 1990, etc
     application_postfix:            # e.g. /confluence in case of url like http://localhost:1990/confluence
@@ -19,7 +19,7 @@ settings:
     JMETER_VERSION: 5.2.1
     allow_analytics: Yes            # Allow sending basic run analytics to Atlassian. These analytics help us to understand how the tool is being used and help us to continue to invest in this tooling. For more details please see our README.
     # Action percentage for Jmeter and Locust load executors
-    view_page: 54
+    view_page: 44
     view_dashboard: 6
     view_blog: 8
     search_cql: 7
@@ -29,7 +29,7 @@ settings:
     view_attachment: 3
     upload_attachment: 5
     like_page: 3
-    standalone_extension: 0 # By default disabled
+    standalone_extension: 10 # By default disabled
 services:
   - module: shellexec
     prepare:
