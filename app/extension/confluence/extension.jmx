@@ -116,11 +116,12 @@
               <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
                 <collectionProp name="Asserion.test_strings">
                   <stringProp name="795836197">Acknowledgement required</stringProp>
+                  <stringProp name="38620533">You have already acknowledged the current content of this page. Thank you.</stringProp>
                 </collectionProp>
                 <stringProp name="Assertion.custom_message"></stringProp>
                 <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
                 <boolProp name="Assertion.assume_success">false</boolProp>
-                <intProp name="Assertion.test_type">2</intProp>
+                <intProp name="Assertion.test_type">34</intProp>
               </ResponseAssertion>
               <hashTree/>
             </hashTree>
@@ -325,7 +326,7 @@
                   <stringProp name="-918873392">performance_d8,performance_f68,performance_k143</stringProp>
                 </collectionProp>
                 <stringProp name="Assertion.custom_message"></stringProp>
-                <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+                <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
                 <boolProp name="Assertion.assume_success">false</boolProp>
                 <intProp name="Assertion.test_type">2</intProp>
               </ResponseAssertion>
