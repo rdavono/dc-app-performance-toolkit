@@ -62,6 +62,7 @@ def __get_users(confluence_api, rpc_api, count):
 def __get_pages(confluence_api, count):
     pages = confluence_api.get_content_search(
         0, count, cql='type=page'
+                      ' and space != RECO'  # filter out our pages
                       ' and title !~ JMeter'  # filter out pages created by JMeter
                       ' and title !~ Selenium'  # filter out pages created by Selenium
                       ' and title !~ locust'  # filter out pages created by locust
