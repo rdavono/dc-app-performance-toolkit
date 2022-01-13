@@ -11354,6 +11354,7 @@ if (response_data.username != vars.get(&quot;app_specific_username&quot;)) {
               </ResponseAssertion>
               <hashTree/>
             </hashTree>
+          </hashTree>
 <!-- RECO END -->
             <IfController guiclass="IfControllerPanel" testclass="IfController" testname="login_as_default_user_if_specific_user_was_loggedin" enabled="true">
               <stringProp name="IfController.condition">${run_as_specific_user}</stringProp>
