@@ -3,7 +3,6 @@ settings:
   artifacts-dir: results/confluence/%Y-%m-%d_%H-%M-%S
   aggregator: consolidator
   verbose: false
-  check-updates: false    # disable bzt check for updates
   env:
     application_hostname: Confl-LoadB-G6IC1UIVD7PZ-1908293169.us-west-2.elb.amazonaws.com
     application_protocol: http      # http or https
@@ -13,12 +12,12 @@ settings:
     admin_login: admin
     admin_password: admin
     load_executor: jmeter           # jmeter and locust are supported. jmeter by default.
-    concurrency: 200                # number of concurrent virtual users for jmeter or locust scenario
-    test_duration: 45m
-    ramp-up: 5m                     # time to spin all concurrent users
-    total_actions_per_hour: 20000
+    concurrency: 2                # number of concurrent virtual users for jmeter or locust scenario
+    test_duration: 5m
+    ramp-up: 5s                     # time to spin all concurrent users
+    total_actions_per_hour: 2000
     WEBDRIVER_VISIBLE: False
-    JMETER_VERSION: 5.4.2
+    JMETER_VERSION: 5.2.1
     LANGUAGE: en_US.utf8
     allow_analytics: Yes            # Allow sending basic run analytics to Atlassian. These analytics help us to understand how the tool is being used and help us to continue to invest in this tooling. For more details please see our README.
     # Action percentage for JMeter and Locust load executors
@@ -47,9 +46,6 @@ services:
     post-process:
       - python util/analytics/analytics.py confluence
       - python util/post_run/cleanup_results_dir.py
-  - module: pip-install
-    packages:
-      - selenium==4.1.3
 execution:
   - scenario: ${load_executor}
     executor: ${load_executor}
@@ -114,7 +110,7 @@ modules:
       httpsampler.ignore_failed_embedded_resources: "true"
   selenium:
     chromedriver:
-      version: "103.0.5060.134" # Supports Chrome version 103. You can refer to http://chromedriver.chromium.org/downloads
+      version: "96.0.4664.45" # Supports Chrome version 96. You can refer to http://chromedriver.chromium.org/downloads
 reporting:
 - data-source: sample-labels
   module: junit-xml
