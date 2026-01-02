@@ -5602,7 +5602,7 @@ if (response_data.username != vars.get(&quot;app_specific_username&quot;)) {
               <stringProp name="HTTPSampler.port"></stringProp>
               <stringProp name="HTTPSampler.protocol"></stringProp>
               <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-              <stringProp name="HTTPSampler.path">${application.postfix}/ajax/readconfirmation/ajax.action?pageId=43806451</stringProp>
+              <stringProp name="HTTPSampler.path">${application.postfix}/ajax/readconfirmation/ajax.action?pageId=44903492</stringProp>
               <stringProp name="HTTPSampler.method">GET</stringProp>
               <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
               <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
@@ -5686,7 +5686,7 @@ if (response_data.username != vars.get(&quot;app_specific_username&quot;)) {
               <hashTree/>
               <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
                 <collectionProp name="Asserion.test_strings">
-                  <stringProp name="795836197">Acknowledgement required</stringProp>
+                  <stringProp name="795836197">Acknowledged</stringProp>
                   <stringProp name="38620533">You have already acknowledged the current content of this page. Thank you.</stringProp>
                 </collectionProp>
                 <stringProp name="Assertion.custom_message"></stringProp>
@@ -5756,7 +5756,7 @@ if (response_data.username != vars.get(&quot;app_specific_username&quot;)) {
               <stringProp name="HTTPSampler.port"></stringProp>
               <stringProp name="HTTPSampler.protocol"></stringProp>
               <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-              <stringProp name="HTTPSampler.path">${application.postfix}/readconfirmation/view.action?pageId=43806451</stringProp>
+              <stringProp name="HTTPSampler.path">${application.postfix}/readconfirmation/view.action?pageId=44904605</stringProp>
               <stringProp name="HTTPSampler.method">GET</stringProp>
               <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
               <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
@@ -5807,7 +5807,7 @@ if (response_data.username != vars.get(&quot;app_specific_username&quot;)) {
               <stringProp name="HTTPSampler.port"></stringProp>
               <stringProp name="HTTPSampler.protocol"></stringProp>
               <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-              <stringProp name="HTTPSampler.path">${application.postfix}/readconfirmation/view.action?pageId=43807200</stringProp>
+              <stringProp name="HTTPSampler.path">${application.postfix}/readconfirmation/view.action?pageId=44904240</stringProp>
               <stringProp name="HTTPSampler.method">GET</stringProp>
               <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
               <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
