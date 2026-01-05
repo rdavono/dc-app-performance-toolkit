@@ -5,7 +5,7 @@ settings:
   verbose: false
   check-updates: false                 # disable bzt check for updates
   env:
-    application_hostname: ac43cb4dd117c454fabbfc4ab2d236fc-881122483.us-east-2.elb.amazonaws.com
+    application_hostname: a1a45ed5cf3724342ab09d83e1e95d5f-619867932.us-east-2.elb.amazonaws.com
     application_protocol: http         # http or https
     application_port: 80               # 80, 443, 8080, 1990, etc
     secure: True                       # Set False to allow insecure connections, e.g. when using self-signed SSL certificate
@@ -35,9 +35,11 @@ settings:
     upload_attachment: 7
     like_page: 3
     standalone_extension: 10
+    #standalone_extension: 0
     upload_emoticon: 3      # For Confluence 8.4.x+
     # Custom dataset section.
     custom_dataset_query: "space=RECO"          # Write CQL query to add CQL output to the app/datasets/confluence/custom_pages.csv, e.g. "title ~ 'AppPage*'"
+    #custom_dataset_query:           # Write CQL query to add CQL output to the app/datasets/confluence/custom_pages.csv, e.g. "title ~ 'AppPage*'"
     local_chrome_binary_path:       # e.g. /usr/bin/google-chrome-stable. Leave it blank to use default Chrome binary path.
 
 services:
@@ -116,7 +118,8 @@ modules:
       httpsampler.ignore_failed_embedded_resources: "true"
   selenium:
     chromedriver:
-      version: "142.0.7444.61" # Supports Chrome version 142. You can refer to https://googlechromelabs.github.io/chrome-for-testing
+      #version: "142.0.7444.61" # Supports Chrome version 142. You can refer to https://googlechromelabs.github.io/chrome-for-testing
+      version: "143.0.7499.146"
 reporting:
 - data-source: sample-labels
   module: junit-xml
